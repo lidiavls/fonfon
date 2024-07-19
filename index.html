@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+	<head>
+		<title>joninhas meu amorzinho</title>
+		<script>
+			function funcNo() {
+				const elem = document.getElementById("buttonNo");
+				const style = window.getComputedStyle(elem);
+				let left = parseInt(style.left.split("p")[0]);
+				left = left / window.innerWidth * 100;
+
+				if (left < 50) {
+					left=75;
+				} else {
+					left=49;
+				}
+
+				elem.setAttribute('style', `position:absolute; left:${left}%;`);
+			}
+		</script>
+		<style>
+			body, html {
+			  background-color: red;
+			  height: 100%;
+			}
+		</style>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+	</head>
+	<body>
+		<section class="hero is-fullheight">
+			<div class="hero-body">
+				<div class="container has-text-centered">
+						<p class="title">Lídia me ama?</p>
+						<div class="columns">
+							<div class="column">
+								<button class="button" onclick="location.href='https://www.youtube.com/watch?v=rpC1PohpbaQ';">sim</button>
+							</div>
+							<div class="column">
+								<button class="button" id="buttonNo" onmouseover="funcNo();" style="position:absolute;">não</button>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</section>
+	</body>
+</html>
