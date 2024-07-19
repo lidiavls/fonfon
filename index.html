@@ -7,14 +7,18 @@
 				const style = window.getComputedStyle(elem);
 				let left = parseInt(style.left.split("p")[0]);
 				left = left / window.innerWidth * 100;
+				let top = parseInt(style.top.split("p")[0]);
 
 				if (left < 50) {
 					left=75;
 				} else {
 					left=49;
 				}
+				top = Math.random() * 100;
 
-				elem.setAttribute('style', `position:absolute; left:${left}%;`);
+				elem.setAttribute('style', `position:absolute; left:${left}%; top:${top}%`);
+			}
+
 			}
 		</script>
 		<style>
